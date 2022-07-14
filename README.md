@@ -22,6 +22,10 @@ I do not condone any of this by the way... like mentioned before,
 this page is for my extremely specific (possibly bats*it)
 case... the ONLY reason it's public is because I don't know ssh either.
 
+I made a mental note not to use sudo
+anywhere in this script - the entire point
+of this practice is to run it in root.
+
 # is it OK If I use it?
 only if you are aware of the risks and are either:
 ''
