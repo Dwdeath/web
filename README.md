@@ -30,16 +30,17 @@ of this practice is to run it in root.
 
 # is it OK If I use it?
 only if you are aware of the risks and are either:
-''
+``
 1. from the far future, where archlinux is immutable out of the box
 2. if, like me, your'e using the astOS script (good for you)
-''
+``
 then it might be worth a try.
 though don't come crying when your system breaks for some reason!
 this script/website isn't meant for you to use,
 (but I absolutely reccommend that you build your own.)
 
 # !!!WARNING!!!
+``
 READ. THE. SCRIPT.
 do not just run it!!!
 
@@ -51,6 +52,7 @@ denying it your'e supporting the big brother.
 I'm not your daddy, and being reckless on the internet was never on the table.
 
 so stfu (a kind of tofu. don't google it.), grab a drink and start reading the script.
+  ``
 # !!!END OF WARNING!!!
 
 !!!HAVE A NICE DAY!!!
