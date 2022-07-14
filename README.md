@@ -9,9 +9,11 @@ https://aur.chaotic.cx/
 you can build your own easily.
 
 # Why?
-because it's annoying and time-consuming to go: "ast chroot 1, yay -S <package name>" every
-time I'm trying to reinstall my weaboo wallpaper changer.
-now I can simply go: "ast install 1 <package name>" like a friggin' human-being.
+because it's annoying and time-consuming for me to check if a package is in the aur or not every time. I'm trying to reinstall my weaboo wallpaper changer.
+now every install is done with: "ast install 1 <package name>" like a friggin' human-being.
+
+It also notably eliminates a bug currently featured involving MAKEPKG that I couldn't bring myself to bother with!
+I'm a busy man, I have nerdy places to be.
 
 # How?
 by adding a line to the python script before installation
