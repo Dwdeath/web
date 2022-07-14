@@ -1,6 +1,7 @@
 # Chaotic
 # What?
-Just a badly written page to easily enable AUR (and more?) on my mechine running immutable astOS
+Just a badly written page to easily enable AUR (and more?) on my mechine running immutable astOS.
+the code to which is here: https://github.com/astos/astos
 
 # Where?
 It's just a partial implementation of this guide:
@@ -11,6 +12,15 @@ you can build your own easily.
 because it's annoying and time-consuming to go: "ast chroot 1, yay -S <package name>" every
 time I'm trying to reinstall my weaboo wallpaper changer.
 now I can simply go: "ast install 1 <package name>" like a friggin' human-being.
+
+# How?
+by adding a line to the python script before installation
+(which, by the way, is NOT reccommended!)
+you can find the line yourself, it's in the astos Main.py file.
+I do not know python yet, but the line is obvoius.
+I do not condone any of this by the way... like mentioned before,
+this page is for my extremely specific (possibly bats*it)
+case... the ONLY reason it's public is because I don't know ssh either.
 
 # is it OK If I use it?
 only if you are aware of the risks and are either:
