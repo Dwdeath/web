@@ -52,7 +52,7 @@ denying it your'e supporting the big brother.
 I'm not your daddy, and being reckless on the internet was never on the table.
 
 so stfu (a kind of tofu. don't google it.), grab a drink and start reading the script.
-```sh
+```
 # !!!END OF WARNING!!!
 
 !!!HAVE A NICE DAY!!!
