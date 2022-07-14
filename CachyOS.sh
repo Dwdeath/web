@@ -1,5 +1,5 @@
 
-echo "expeerimental - DO NOT RUN YET!"
+echo "skipping CachyOS"
 
 #wget https://mirror.cachyos.org/cachyos-repo.tar.xz
 #tar xvf cachyos-repo.tar.xz
