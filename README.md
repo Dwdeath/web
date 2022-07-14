@@ -18,7 +18,7 @@ I'm a busy man, I have nerdy places to be.
 # How?
 by adding a line to the python script before installation
 (which, by the way, is NOT reccommended!)
-you can find the line yourself, it's in the astos Main.py file.
+you can find the line yourself, it is located somwhere in the astos Main.py file.
 I do not know python yet, but the line is obvoius.
 I do not condone any of this by the way... like mentioned before,
 this page is for my extremely specific (possibly bats*it)
@@ -32,11 +32,11 @@ of this practice is to run it in root.
 only if you are aware of the risks and are either:
 ```sh
 1. from the far future, where archlinux is immutable out of the box
-2. if, like me, your'e using the astOS script (good for you)
+2. if, like me, you are using the astOS script (good for you)
 ```
 then it might be worth a try.
 though don't come crying when your system breaks for some reason!
-this script/website isn't meant for you to use,
+this script/website is not meant for you to use,
 (but I absolutely reccommend that you build your own.)
 
 # !!!WARNING!!!
