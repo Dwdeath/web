@@ -10,19 +10,14 @@ you can build your own easily.
 
 # Why?
 because it's annoying and time-consuming for me to check if a package is in the aur or not every time. I'm trying to reinstall my weaboo wallpaper changer.
-now every install is done with: "ast install 1 <package name>" like a friggin' human-being.
+now I can use tools (mostly crated by others) like a friggin' human-being.
 
 It also notably eliminates a bug currently featured involving MAKEPKG that I couldn't bring myself to bother with!
 I'm a busy man, I have nerdy places to be.
 
 # How?
-by adding a line to the python script before installation
-(which, by the way, is NOT reccommended!)
-you can find the line yourself, it is located somwhere in the astos Main.py file.
-I do not know python yet, but the line is obvoius.
-I do not condone any of this by the way... like mentioned before,
-this page is for my extremely specific (possibly bats*it)
-case... the ONLY reason it's public is because I don't know ssh either.
+Use one of the scripts to gain access
+to yay and continue normally
 
 I made a mental note not to use sudo
 anywhere in this script - the entire point
@@ -39,6 +34,26 @@ though don't come crying when your system breaks for some reason!
 this script/website is not meant for you to use,
 (but I absolutely reccommend that you build your own.)
 
+# Bugs? 
+absolutely. 
+
+# Is there a guide?
+Nope. Fork it and make your own guide
+after reading and understanding the script.
+
+This abomination is for me to use anyway.
+
+You know what, you're nice... Here's the basics:
+1. You find a script in that repo that you understand and like. 
+
+2. You go:
+``sh
+sh <(curl -s <dwdeath.github.io/<this repo>\<name of script>.sh) 
+`` 
+and watch joyfully as your mechine is being invaded
+by my own incompetence, bad practices and incredibly loose
+links to other insecure stuff. 
+
 # !!!WARNING!!!
 ```sh
 READ. THE. SCRIPT.
@@ -52,6 +67,7 @@ denying it your'e supporting the big brother.
 I'm not your daddy, and being reckless on the internet was never on the table.
 
 so stfu (a kind of tofu. don't google it.), grab a drink and start reading the script.
+at the moment of writing, it's incredibly short, but contains links to other scripts. 
 ```
 # !!!END OF WARNING!!!
 
