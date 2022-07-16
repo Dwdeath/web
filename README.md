@@ -5,7 +5,7 @@ the code to which is here: https://github.com/astos/astos
 
 # Where?
 It's just a partial implementation of this guide:
-https://aur.chaotic.cx/
+https://aur.chaotic.cx/ and some other stuff... 
 you can build your own easily.
 
 # Why?
