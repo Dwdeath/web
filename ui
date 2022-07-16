@@ -1,1 +1,3 @@
-bash <( curl "https://raw.githubusercontent.com/excalibur1234/pacui/master/pacui")
+#!/bin/sh
+
+sh <( curl "https://raw.githubusercontent.com/excalibur1234/pacui/master/pacui")
