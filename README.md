@@ -1,3 +1,8 @@
+# This page is under heavy dev and is currently dangerous. I'm working on it. pleaseDO NOT run anything locally!
+# I'll add a thing when a thing happens and you can finally use the thing.
+# I'm a filthy noob who learned linux only recently and I have a tendency to do things the dumb way even IRL.
+# Thank you for your patience
+
 # Chaotic
 # What?
 Just a badly written page to easily enable AUR (and more?) on my mechine running immutable astOS.
