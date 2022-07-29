@@ -1,7 +1,8 @@
 
 cfdisk /dev/nvme0n1
 
-sudo pacman -Sy git
+pacman -Sy git
+
 git clone https://github.com/astos/astos && cd astos
 
 mkfs.fat -F32 /dev/nvme0n1p1
