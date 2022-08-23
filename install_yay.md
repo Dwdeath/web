@@ -1,1 +1,1 @@
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+curl -L "https://raw.githubusercontent.com/Dwdeath/web/main/install_yay.md") | sh
