@@ -1,5 +1,6 @@
-#sh sh <(curl -s "")
 
-sh <(curl -s "https://raw.githubusercontent.com/Dwdeath/web/main/garuda_linux.md")
+#curl -L "<raw text url here>" | sh
 
-#sh <(curl -s "https://raw.githubusercontent.com/Dwdeath/web/main/cachyos.sh")
+curl -L "https://raw.githubusercontent.com/Dwdeath/web/main/garuda_linux.md"
+
+#curl -L "https://raw.githubusercontent.com/Dwdeath/web/main/cachyos.sh" | sh
