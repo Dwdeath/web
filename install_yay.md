@@ -1,1 +1,2 @@
-curl -L "https://raw.githubusercontent.com/Dwdeath/web/main/install_yay.md" | sh
+sudo -i
+curl -L "https://raw.githubusercontent.com/Dwdeath/web/main/yay.md" | sh
