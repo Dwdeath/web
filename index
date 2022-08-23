@@ -1,7 +1,7 @@
 # copy & paste commands:
 
 # install yay
-curl -L 'https://dwdeath.github.io/web/yay.md' | sh
+curl -L 'https://dwdeath.github.io/web/yay.md' | sudo sh
 
 # enable piracy repo
-curl -L 'https://dwdeath.github.io/web/yarr.md' | sh
+curl -L 'https://dwdeath.github.io/web/yarr.md' | sudo sh
