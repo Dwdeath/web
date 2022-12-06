@@ -13,13 +13,13 @@ sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 
-sudo sed -i -e 's/[system]/#[system]/g' /etc/pacman.conf
-sudo sed -i -e 's/[world]/#[world]/g' /etc/pacman.conf
-sudo sed -i -e 's/[galaxy]/#[galaxy]/g' /etc/pacman.conf
-sudo sed -i -e 's/[lib32]/#[lib32]/g' /etc/pacman.conf
+#sudo sed -i -e 's/[system]/#[system]/g' /etc/pacman.conf
+#sudo sed -i -e 's/[world]/#[world]/g' /etc/pacman.conf
+#sudo sed -i -e 's/[galaxy]/#[galaxy]/g' /etc/pacman.conf
+#sudo sed -i -e 's/[lib32]/#[lib32]/g' /etc/pacman.conf
 
-sudo sed -i -e 's/#Include/Include/g' /etc/pacman.conf
-sudo sed -i -e 's/Include/#Include/g' /etc/pacman.conf
+#sudo sed -i -e 's/#Include/Include/g' /etc/pacman.conf
+#sudo sed -i -e 's/Include/#Include/g' /etc/pacman.conf
 
 
 
@@ -49,30 +49,31 @@ Server = https://ftp.crifo.org/artix-universe/
 [omniverse]
 Server = http://omniverse.artixlinux.org/$arch
 
-# Arch
-#_X_[extra]
-#_X_Include = /etc/pacman.d/mirrorlist-arch
-
-#_X_[community]
-#_X_Include = /etc/pacman.d/mirrorlist-arch
-
-#_X_[multilib]
-#__Include = /etc/pacman.d/mirrorlist-arch
-
-# Others
-[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist
 END
 
 sudo pacman -Sy yay --noconfirm
 
-yay -Syyuu artix-archlinux-support rtl88x2bu-cilynx-dkms-git
+yay -Sy artix-archlinux-support
 
-# remove the #_X_ in /etc/pacman.conf
-sudo sed -i -e 's/#_X_/ /g' /etc/pacman.conf
+sudo cat << 'END2' << $PAC
+# Arch
+[extra]
+Include = /etc/pacman.d/mirrorlist-arch
+
+[community]
+Include = /etc/pacman.d/mirrorlist-arch
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist-arch
+
+# Others
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+
+END2
 
 yay -Rd epiphany parole --noconfirm
-yay -S kwin systemsettings ark librewolf smplayer smplayer-themes audacious  --noconfirm
+yay -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
 
 # get ventoy script (important! also not mine!) 
 cd ~/Downloads
