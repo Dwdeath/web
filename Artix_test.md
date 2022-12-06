@@ -8,10 +8,6 @@ PAC="/etc/pacman.conf"
 
 #default of PAC is: "/etc/pacman.conf"
 
-sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key FBA220DFC880C036
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-
 #sudo sed -i -e 's/<from>/<to>/g' /etc/pacman.conf
 
 #sudo sed -i -e 's/[system]//g' $PAC
@@ -40,7 +36,7 @@ END
 
 sudo pacman -Sy yay --noconfirm
 
-yay -Sy artix-archlinux-support
+yay -Sy artix-archlinux-support archlinux-keyring
 
 sudo cat << 'END2' << $PAC
 # Arch
@@ -53,11 +49,19 @@ Include = /etc/pacman.d/mirrorlist-arch
 [multilib]
 Include = /etc/pacman.d/mirrorlist-arch
 
+END2
+
+sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key FBA220DFC880C036
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+sudo cat << 'END3' << $PAC
+
 # Others
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
 
-END2
+END3
 
 yay -Rd epiphany parole --noconfirm
 yay -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
