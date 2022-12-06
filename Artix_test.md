@@ -57,4 +57,4 @@ sudo pacman -Sy yay
 yay -Syyuu artix-archlinux-support rtl88x2bu-cilynx-dkms-git
 
 # remove the #_X_ in /etc/pacman.conf
-sudo sed -i -e 's/abc/#_X_/g' /etc/pacman.conf
+sudo sed -i -e 's/#_X_/ /g' /etc/pacman.conf
