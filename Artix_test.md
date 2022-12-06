@@ -22,7 +22,7 @@ Server = http://omniverse.artixlinux.org/$arch
 
 pacman -Sy yay --noconfirm
 
-pacman -Sy artix-archlinux-support archlinux-keyring
+pacman -Sy artix-archlinux-support
 
 echo "
 # Arch
