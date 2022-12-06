@@ -2,9 +2,10 @@
 
 pacman -Sy sed git curl wget micro doas python --noconfirm
 
+ wget https://github.com/archlinux/svntogit-packages/raw/packages/pacman-mirrorlist/trunk/mirrorlist -O /etc/pacman.d/mirrorlist-arch
+
 echo " 
 # Artix
-
 [lib32]
 Include = /etc/pacman.d/mirrorlist
 
