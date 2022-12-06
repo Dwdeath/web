@@ -1,7 +1,8 @@
 #!/bin/sh
 
-sudo pacman -Sy git curl wget micro doas
-#-Add repos-
+sudo pacman -Sy sed git curl wget micro doas --noconfirm
+
+#Add repos
 
 PAC="/etc/pacman.conf"
 
@@ -52,9 +53,15 @@ Server = http://omniverse.artixlinux.org/$arch
 Include = /etc/pacman.d/chaotic-mirrorlist
 " >> $PAC
 
-sudo pacman -Sy yay
+sudo pacman -Sy yay --noconfirm
 
 yay -Syyuu artix-archlinux-support rtl88x2bu-cilynx-dkms-git
 
 # remove the #_X_ in /etc/pacman.conf
 sudo sed -i -e 's/#_X_/ /g' /etc/pacman.conf
+
+yay -Rd epiphany parole --noconfirm
+yay -S librewolf smplayer smplayer-themes audacious  --noconfirm
+
+wget 
+
