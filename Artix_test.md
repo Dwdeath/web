@@ -30,7 +30,7 @@ echo "
 Include = /etc/pacman.d/mirrorlist-arch
 
 [community]
-Include = /etc/pacman.d/mirrorlist-arch\n
+Include = /etc/pacman.d/mirrorlist-arch
 
 [multilib]
 Include = /etc/pacman.d/mirrorlist-arch
