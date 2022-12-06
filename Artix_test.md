@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -Sy cat git curl wget micro doas python --noconfirm
+sudo pacman -Sy sed cat git curl wget micro doas python --noconfirm
 
 #Add repos
 
