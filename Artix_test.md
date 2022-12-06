@@ -61,7 +61,18 @@ yay -Syyuu artix-archlinux-support rtl88x2bu-cilynx-dkms-git
 sudo sed -i -e 's/#_X_/ /g' /etc/pacman.conf
 
 yay -Rd epiphany parole --noconfirm
-yay -S librewolf smplayer smplayer-themes audacious  --noconfirm
+yay -S kwin systemsettings ark librewolf smplayer smplayer-themes audacious  --noconfirm
 
-wget 
+# get ventoy script (important!) 
+wget '' '~/Downloads/Scripts/run after every kernel update/'
+
+# get owl wallpaper
+wget https://w.wallhaven.cc/full/5w/wallhaven-5wmmg1.jpg ~/Pictures
+
+# get theme for kde
+wget 'https://github.com/yeyushengfan258/Afterglow-kde/archive/master.zip' ~/Downloads
+wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip' ~/Downloads
+
+# make files executable with double click:
+sudo xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --create --type bool --set true
 
