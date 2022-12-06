@@ -4,16 +4,6 @@ sudo pacman -Sy sed cat git curl wget micro doas python --noconfirm
 
 #Add repos
 
-#PAC="/etc/pacman.conf"
-
-#default of PAC is: "/etc/pacman.conf"
-
-#sudo sed -i -e 's/<from>/<to>/g' /etc/pacman.conf
-
-#sudo sed -i -e 's/[system]//g' $PAC
-#sudo sed -i -e 's/Include = /etc/pacman.d/mirrorlist//g' $PAC
-#sudo sed -i -e 's///g' $PAC
-
 sudo cat << 'END' << /etc/pacman.conf
 
 # Artix
