@@ -12,17 +12,6 @@ sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-
-#sudo sed -i -e 's/[system]/#[system]/g' /etc/pacman.conf
-#sudo sed -i -e 's/[world]/#[world]/g' /etc/pacman.conf
-#sudo sed -i -e 's/[galaxy]/#[galaxy]/g' /etc/pacman.conf
-#sudo sed -i -e 's/[lib32]/#[lib32]/g' /etc/pacman.conf
-
-#sudo sed -i -e 's/#Include/Include/g' /etc/pacman.conf
-#sudo sed -i -e 's/Include/#Include/g' /etc/pacman.conf
-
-
-
 sudo cat << 'END' << $PAC
 
 # Artix
