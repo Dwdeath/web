@@ -64,7 +64,7 @@ yay -Rd epiphany parole --noconfirm
 yay -S kwin systemsettings ark librewolf smplayer smplayer-themes audacious  --noconfirm
 
 # get ventoy script (important!) 
-wget '' '~/Downloads/Scripts/run after every kernel update/'
+wget 'https://api.github.com/repos/ventoy/vtoyboot/releases/leatest' '~/Downloads/Scripts/run after every kernel update/'
 
 # get owl wallpaper
 wget https://w.wallhaven.cc/full/5w/wallhaven-5wmmg1.jpg ~/Pictures
