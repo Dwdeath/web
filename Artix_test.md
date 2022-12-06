@@ -44,6 +44,17 @@ echo "
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
+
+#echo "
+#[valveaur]
+#Server = http://repo.steampowered.com/arch/valveaur
+#
+#[ashleyis]
+#Server = http://arch.ashleytowns.id.au/repo/$arch
+#
+#" >> /etc/pacman.conf
+
+
 pacman -Rd epiphany parole --noconfirm
 pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
 
