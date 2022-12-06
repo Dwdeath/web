@@ -65,22 +65,7 @@ yay -S kwin systemsettings ark librewolf smplayer smplayer-themes audacious  --n
 
 # get ventoy script (important!) 
 cd ~/Downloads
-
-#!/bin/bash
-IFS=$' \t\r\n'
-
-assets=$(curl https://api.github.com/repos/ventoy/vtoyboot/releases | jq -r '.[0].assets[].browser_download_url')
-
-for asset in $assets; do
-    curl -OL $asset
-done
-
-#Backup
-#curl -s https://api.github.com/repos/ventoy/vtoyboot/releases/latest \
-#| grep " vtoyboot.*iso" \
-#| cut -d : -f 2,3 \
-#| tr -d \" \
-#| wget -qi -
+wget https://github.com/ventoy/vtoyboot/releases/download/v1.0.25/vtoyboot-1.0.25.iso
 
 # get owl wallpaper
 cd ~/Pictures
