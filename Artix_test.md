@@ -23,6 +23,7 @@ sudo sed -i -e 's/Include/#Include/g' /etc/pacman.conf
 
 
 echo "" >> $PAC
+cat << END 
 echo"
 # Artix
 [system]
@@ -62,6 +63,7 @@ Server = http://omniverse.artixlinux.org/$arch
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
 " >> $PAC
+END
 
 sudo pacman -Sy yay --noconfirm
 
