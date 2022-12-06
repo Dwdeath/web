@@ -17,12 +17,11 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
 Server = https://ftp.crifo.org/artix-universe/
 
 [omniverse]
-Server = http://omniverse.artixlinux.org/$arch
-" >> /etc/pacman.conf
+Server = http://omniverse.artixlinux.org/$arch" >> /etc/pacman.conf
 
 pacman -Sy yay --noconfirm
 
-pacman -Sy artix-archlinux-support
+pacman -Sy artix-archlinux-support --noconfirm
 
 echo "
 # Arch
@@ -33,9 +32,7 @@ Include = /etc/pacman.d/mirrorlist-arch
 Include = /etc/pacman.d/mirrorlist-arch
 
 [multilib]
-Include = /etc/pacman.d/mirrorlist-arch
-
-" >> /etc/pacman.conf
+Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 
 pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key FBA220DFC880C036
@@ -44,9 +41,7 @@ pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
 echo "
 # Others
 [chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist
-
-" >> /etc/pacman.conf
+Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
 pacman -Rd epiphany parole --noconfirm
 pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
