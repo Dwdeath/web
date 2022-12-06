@@ -4,7 +4,7 @@ sudo pacman -Sy sed cat git curl wget micro doas python --noconfirm
 
 #Add repos
 
-sudo cat << 'END' << /etc/pacman.conf
+sudo cat << 'kitty' << /etc/pacman.conf
 
 # Artix
 
@@ -22,13 +22,13 @@ Server = https://ftp.crifo.org/artix-universe/
 [omniverse]
 Server = http://omniverse.artixlinux.org/$arch
 
-END
+kitty
 
 sudo pacman -Sy yay --noconfirm
 
 yay -Sy artix-archlinux-support archlinux-keyring
 
-sudo cat << 'END2' << /etc/pacman.conf
+sudo cat << 'kitty2' << /etc/pacman.conf
 # Arch
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
@@ -39,19 +39,19 @@ Include = /etc/pacman.d/mirrorlist-arch
 [multilib]
 Include = /etc/pacman.d/mirrorlist-arch
 
-END2
+kitty2
 
 sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-sudo cat << 'END3' << /etc/pacman.conf
+sudo cat << 'kitty3' << /etc/pacman.conf
 
 # Others
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
 
-END3
+kitty3
 
 yay -Rd epiphany parole --noconfirm
 yay -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
