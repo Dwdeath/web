@@ -12,20 +12,30 @@ sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
+
+sudo sed -i -e 's/[system]/#[system]/g' /etc/pacman.conf
+sudo sed -i -e 's/[world]/#[world]/g' /etc/pacman.conf
+sudo sed -i -e 's/[galaxy]/#[galaxy]/g' /etc/pacman.conf
+sudo sed -i -e 's/[lib32]/#[lib32]/g' /etc/pacman.conf
+
+sudo sed -i -e 's/#Include/Include/g' /etc/pacman.conf
+sudo sed -i -e 's/Include/#Include/g' /etc/pacman.conf
+
+
 echo "" >> $PAC
 echo"
 # Artix
-#_X_[system]
-#_X_Include = /etc/pacman.d/mirrorlist
+[system]
+Include = /etc/pacman.d/mirrorlist
 
-#_X_[world]
-#_X_Include = /etc/pacman.d/mirrorlist
+[world]
+Include = /etc/pacman.d/mirrorlist
 
-#_X_[galaxy]
-#_X_Include = /etc/pacman.d/mirrorlist
+[galaxy]
+Include = /etc/pacman.d/mirrorlist
 
-#_X_[lib32]
-#_X_Include = /etc/pacman.d/mirrorlist
+[lib32]
+Include = /etc/pacman.d/mirrorlist
 
 [universe]
 Server = https://universe.artixlinux.org/$arch
