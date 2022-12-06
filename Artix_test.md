@@ -23,7 +23,7 @@ sudo sed -i -e 's/Include/#Include/g' /etc/pacman.conf
 
 
 
-cat << 'END' << $PAC
+sudo cat << 'END' << $PAC
 
 # Artix
 [system]
