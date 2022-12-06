@@ -74,15 +74,15 @@ sudo sed -i -e 's/#_X_/ /g' /etc/pacman.conf
 yay -Rd epiphany parole --noconfirm
 yay -S kwin systemsettings ark librewolf smplayer smplayer-themes audacious  --noconfirm
 
-# get ventoy script (important!) 
+# get ventoy script (important! also not mine!) 
 cd ~/Downloads
 wget https://github.com/ventoy/vtoyboot/releases/download/v1.0.25/vtoyboot-1.0.25.iso
 
-# get owl wallpaper
+# get owl wallpaper (not mine!)
 cd ~/Pictures
 wget https://w.wallhaven.cc/full/5w/wallhaven-5wmmg1.jpg
 
-# get theme for kde
+# get theme for kde (not mine!)
 cd ~/Downloads
 wget 'https://github.com/yeyushengfan258/Afterglow-kde/archive/master.zip'
 wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip' 
@@ -90,3 +90,7 @@ wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip'
 # make files executable with double click:
 sudo xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --create --type bool --set true
 
+# activate the leatest gaming script (not mine!)
+curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/ultra-gaming-setup-wizard/main/ultra-gaming-setup-wizard.sh >ultra-gaming-setup-wizard.sh && \
+ chmod 0755 ultra-gaming-setup-wizard.sh && \
+ ./ultra-gaming-setup-wizard.sh
