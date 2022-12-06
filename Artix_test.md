@@ -14,17 +14,17 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 echo "" >> $PAC
 echo"
 # Artix
-#__[system]
-#__Include = /etc/pacman.d/mirrorlist
+#_X_[system]
+#_X_Include = /etc/pacman.d/mirrorlist
 
-#__[world]
-#__Include = /etc/pacman.d/mirrorlist
+#_X_[world]
+#_X_Include = /etc/pacman.d/mirrorlist
 
-#__[galaxy]
-#__Include = /etc/pacman.d/mirrorlist
+#_X_[galaxy]
+#_X_Include = /etc/pacman.d/mirrorlist
 
-#__[lib32]
-#__Include = /etc/pacman.d/mirrorlist
+#_X_[lib32]
+#_X_Include = /etc/pacman.d/mirrorlist
 
 [universe]
 Server = https://universe.artixlinux.org/$arch
@@ -38,13 +38,13 @@ Server = https://ftp.crifo.org/artix-universe/
 Server = http://omniverse.artixlinux.org/$arch
 
 # Arch
-#__[extra]
-#__Include = /etc/pacman.d/mirrorlist-arch
+#_X_[extra]
+#_X_Include = /etc/pacman.d/mirrorlist-arch
 
-#__[community]
-#__Include = /etc/pacman.d/mirrorlist-arch
+#_X_[community]
+#_X_Include = /etc/pacman.d/mirrorlist-arch
 
-#__[multilib]
+#_X_[multilib]
 #__Include = /etc/pacman.d/mirrorlist-arch
 
 # Others
@@ -54,4 +54,7 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 
 sudo pacman -Sy yay
 
-yay -Syyuu rtl88x2bu-cilynx-dkms-git
+yay -Syyuu artix-archlinux-support rtl88x2bu-cilynx-dkms-git
+
+# remove the #_X_ in /etc/pacman.conf
+sudo sed -i -e 's/abc/#_X_/g' /etc/pacman.conf
