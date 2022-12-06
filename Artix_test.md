@@ -64,14 +64,21 @@ yay -Rd epiphany parole --noconfirm
 yay -S kwin systemsettings ark librewolf smplayer smplayer-themes audacious  --noconfirm
 
 # get ventoy script (important!) 
-wget 'https://api.github.com/repos/ventoy/vtoyboot/releases/leatest' '~/Downloads/Scripts/run after every kernel update/'
+cd ~/Downloads
+curl -s https://api.github.com/repos/ventoy/vtoyboot/releases/latest \
+| grep " vtoyboot.*iso" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
 
 # get owl wallpaper
-wget https://w.wallhaven.cc/full/5w/wallhaven-5wmmg1.jpg ~/Pictures
+cd ~/Pictures
+wget https://w.wallhaven.cc/full/5w/wallhaven-5wmmg1.jpg
 
 # get theme for kde
-wget 'https://github.com/yeyushengfan258/Afterglow-kde/archive/master.zip' ~/Downloads
-wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip' ~/Downloads
+cd ~/Downloads
+wget 'https://github.com/yeyushengfan258/Afterglow-kde/archive/master.zip'
+wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip' 
 
 # make files executable with double click:
 sudo xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --create --type bool --set true
