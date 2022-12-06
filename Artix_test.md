@@ -2,50 +2,50 @@
 
 pacman -Sy sed git curl wget micro doas python --noconfirm
 
-echo " \n
-# Artix\n
-\n
-[lib32]\n
-Include = /etc/pacman.d/mirrorlist\n
-\n
-[universe]\n
-Server = https://universe.artixlinux.org/$arch\n
-Server = https://mirror1.artixlinux.org/universe/$arch\n
-Server = https://mirror.pascalpuffke.de/artix-universe/$arch\n
-Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch\n
-Server = https://mirror1.cl.netactuate.com/artix/universe/$arch\n
-Server = https://ftp.crifo.org/artix-universe/\n
-\n
-[omniverse]\n
-Server = http://omniverse.artixlinux.org/$arch\n
+echo " 
+# Artix
+
+[lib32]
+Include = /etc/pacman.d/mirrorlist
+
+[universe]
+Server = https://universe.artixlinux.org/$arch
+Server = https://mirror1.artixlinux.org/universe/$arch
+Server = https://mirror.pascalpuffke.de/artix-universe/$arch
+Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
+Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
+Server = https://ftp.crifo.org/artix-universe/
+
+[omniverse]
+Server = http://omniverse.artixlinux.org/$arch
 " >> /etc/pacman.conf
 
 pacman -Sy yay --noconfirm
 
 pacman -Sy artix-archlinux-support archlinux-keyring
 
-echo "\n
-# Arch\n
-[extra]\n
+echo "
+# Arch
+[extra]
+Include = /etc/pacman.d/mirrorlist-arch
+
+[community]
 Include = /etc/pacman.d/mirrorlist-arch\n
-\n
-[community]\n
-Include = /etc/pacman.d/mirrorlist-arch\n
-\n
-[multilib]\n
-Include = /etc/pacman.d/mirrorlist-arch\n
-\n
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist-arch
+
 " >> /etc/pacman.conf
 
 pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key FBA220DFC880C036
 pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-echo "\n
-# Others\n
-[chaotic-aur]\n
-Include = /etc/pacman.d/chaotic-mirrorlist\n
-\n
+echo "
+# Others
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+
 " >> /etc/pacman.conf
 
 pacman -Rd epiphany parole --noconfirm
