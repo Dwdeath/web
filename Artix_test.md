@@ -1,10 +1,10 @@
 #!/bin/sh
 
-pacman -Sy sed cat git curl wget micro doas python --noconfirm
+pacman -Sy sed bat git curl wget micro doas python --noconfirm
 
 #Add repos
 
-cat << 'kitty' << /etc/pacman.conf
+bat << 'kitty' << /etc/pacman.conf
 
 # Artix
 
@@ -28,7 +28,7 @@ pacman -Sy yay --noconfirm
 
 pacman -Sy artix-archlinux-support archlinux-keyring
 
-cat << 'kitty2' << /etc/pacman.conf
+bat << 'kitty2' << /etc/pacman.conf
 # Arch
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
@@ -45,7 +45,7 @@ pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key FBA220DFC880C036
 pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-cat << 'kitty3' << /etc/pacman.conf
+bat << 'kitty3' << /etc/pacman.conf
 
 # Others
 [chaotic-aur]
