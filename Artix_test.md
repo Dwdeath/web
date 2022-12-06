@@ -4,7 +4,7 @@ sudo pacman -Sy sed cat git curl wget micro doas python --noconfirm
 
 #Add repos
 
-PAC="/etc/pacman.conf"
+#PAC="/etc/pacman.conf"
 
 #default of PAC is: "/etc/pacman.conf"
 
@@ -14,7 +14,7 @@ PAC="/etc/pacman.conf"
 #sudo sed -i -e 's/Include = /etc/pacman.d/mirrorlist//g' $PAC
 #sudo sed -i -e 's///g' $PAC
 
-sudo cat << 'END' << $PAC
+sudo cat << 'END' << /etc/pacman.conf
 
 # Artix
 
@@ -38,7 +38,7 @@ sudo pacman -Sy yay --noconfirm
 
 yay -Sy artix-archlinux-support archlinux-keyring
 
-sudo cat << 'END2' << $PAC
+sudo cat << 'END2' << /etc/pacman.conf
 # Arch
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
@@ -55,7 +55,7 @@ sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-sudo cat << 'END3' << $PAC
+sudo cat << 'END3' << /etc/pacman.conf
 
 # Others
 [chaotic-aur]
