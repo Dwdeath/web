@@ -1,10 +1,10 @@
 #!/bin/sh
 
-sudo pacman -Sy sed cat git curl wget micro doas python --noconfirm
+pacman -Sy sed cat git curl wget micro doas python --noconfirm
 
 #Add repos
 
-sudo cat << 'kitty' << /etc/pacman.conf
+cat << 'kitty' << /etc/pacman.conf
 
 # Artix
 
@@ -24,11 +24,11 @@ Server = http://omniverse.artixlinux.org/$arch
 
 kitty
 
-sudo pacman -Sy yay --noconfirm
+pacman -Sy yay --noconfirm
 
-yay -Sy artix-archlinux-support archlinux-keyring
+pacman -Sy artix-archlinux-support archlinux-keyring
 
-sudo cat << 'kitty2' << /etc/pacman.conf
+cat << 'kitty2' << /etc/pacman.conf
 # Arch
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
@@ -41,11 +41,11 @@ Include = /etc/pacman.d/mirrorlist-arch
 
 kitty2
 
-sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key FBA220DFC880C036
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+pacman-key --lsign-key FBA220DFC880C036
+pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-sudo cat << 'kitty3' << /etc/pacman.conf
+cat << 'kitty3' << /etc/pacman.conf
 
 # Others
 [chaotic-aur]
@@ -53,8 +53,8 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 
 kitty3
 
-yay -Rd epiphany parole --noconfirm
-yay -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
+pacman -Rd epiphany parole --noconfirm
+pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
 
 # get ventoy script (important! also not mine!) 
 cd ~/Downloads
@@ -70,7 +70,7 @@ wget 'https://github.com/yeyushengfan258/Afterglow-kde/archive/master.zip'
 wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip' 
 
 # make files executable with double click:
-sudo xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --create --type bool --set true
+xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --create --type bool --set true
 
 # activate the leatest gaming script (not mine!)
 curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/ultra-gaming-setup-wizard/main/ultra-gaming-setup-wizard.sh >ultra-gaming-setup-wizard.sh && \
