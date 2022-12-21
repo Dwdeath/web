@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo -i
+
 pacman -Sy sed git curl wget micro doas python --noconfirm
 
 curl https://raw.githubusercontent.com/Dwdeath/web/main/keys | sh #install keyrings
@@ -10,6 +12,8 @@ pacman -Sy
 
 pacman -Rd epiphany parole --noconfirm
 #pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
+
+exit 
 
 # get ventoy script (important! also not mine!) 
 cd ~/Downloads
