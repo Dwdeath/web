@@ -6,6 +6,8 @@ curl https://raw.githubusercontent.com/Dwdeath/web/main/keys | sh #install keyri
 
 curl https://raw.githubusercontent.com/Dwdeath/web/main/pacman >> /etc/pacman.conf # update /etc/pacman.conf
 
+pacman -Sy
+
 pacman -Rd epiphany parole --noconfirm
 #pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
 
