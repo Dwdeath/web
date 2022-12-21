@@ -1,30 +1,18 @@
 
-[universe]
-Server = https://universe.artixlinux.org/$arch
-Server = https://mirror1.artixlinux.org/universe/$arch
-Server = https://mirror.pascalpuffke.de/artix-universe/$arch
-Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
-Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
-Server = https://ftp.crifo.org/artix-universe/
-
-[omniverse]
-Server = https://eu-mirror.artixlinux.org/omniverse/$arch
-Server = https://omniverse.artixlinux.org/$arch
-
 # Arch
-#[extra]
-#Include = /etc/pacman.d/mirrorlist-arch
+[extra]
+Include = /etc/pacman.d/mirrorlist-arch
 
-#[community]
-#Include = /etc/pacman.d/mirrorlist-arch
+[community]
+Include = /etc/pacman.d/mirrorlist-arch
 
-#[multilib]
-#Include = /etc/pacman.d/mirrorlist-arch
+[multilib]
+Include = /etc/pacman.d/mirrorlist-arch
 
 # Others
-#[chaotic-aur]
-#Include = /etc/pacman.d/chaotic-mirrorlist
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
 
 #[cachyos]
-#SigLevel = Optional TrustAll
-#Server = https://mirror.cachyos.org/repo/$arch/$repo
+SigLevel = Optional TrustAll
+Server = https://mirror.cachyos.org/repo/$arch/$repo
