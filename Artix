@@ -1,19 +1,16 @@
 #!/bin/sh
 
-sudo -i
+sudo pacman -Sy sed git curl wget micro doas python --noconfirm
 
-pacman -Sy sed git curl wget micro doas python --noconfirm
+sudo curl https://raw.githubusercontent.com/Dwdeath/web/main/keys | sh #install keyrings
 
-curl https://raw.githubusercontent.com/Dwdeath/web/main/keys | sh #install keyrings
+sudo curl https://raw.githubusercontent.com/Dwdeath/web/main/artix_repos >> /etc/pacman.conf # update /etc/pacman.conf
+sudo pacman -Sy artix-archlinux-support --noconfirm
+sudo curl https://raw.githubusercontent.com/Dwdeath/web/main/pacman_repos >> /etc/pacman.conf # update /etc/pacman.conf
+sudo pacman -Sy
 
-curl https://raw.githubusercontent.com/Dwdeath/web/main/pacman >> /etc/pacman.conf # update /etc/pacman.conf
-
-pacman -Sy
-
-pacman -Rd epiphany parole --noconfirm
+sudo pacman -Rd epiphany parole --noconfirm
 #pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
-
-exit 
 
 # get ventoy script (important! also not mine!) 
 cd ~/Downloads
