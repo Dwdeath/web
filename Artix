@@ -1,13 +1,15 @@
 #!/bin/sh
 
-sudo pacman -Sy sed git curl wget micro doas python --noconfirm
+sudo -i
 
-sudo curl https://raw.githubusercontent.com/Dwdeath/web/main/keys | sh #install keyrings
+pacman -Sy sed git curl wget micro doas python --noconfirm
 
-sudo curl https://raw.githubusercontent.com/Dwdeath/web/main/artix_repos >> /etc/pacman.conf # update /etc/pacman.conf
-sudo pacman -Sy artix-archlinux-support --noconfirm
-sudo curl https://raw.githubusercontent.com/Dwdeath/web/main/pacman_repos >> /etc/pacman.conf # update /etc/pacman.conf
-sudo pacman -Sy
+curl https://raw.githubusercontent.com/Dwdeath/web/main/keys | sh #install keyrings
+
+curl https://raw.githubusercontent.com/Dwdeath/web/main/artix_repos >> /etc/pacman.conf # update /etc/pacman.conf
+pacman -Sy artix-archlinux-support --noconfirm
+curl https://raw.githubusercontent.com/Dwdeath/web/main/pacman_repos >> /etc/pacman.conf # update /etc/pacman.conf
+pacman -Sy
 
 sudo pacman -Rd epiphany parole --noconfirm
 #pacman -Syyuu kwin systemsettings ark librewolf smplayer smplayer-themes audacious rtl88x2bu-cilynx-dkms-git --noconfirm
@@ -30,4 +32,5 @@ xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --c
 
 # activate the leatest gaming script (not mine!)
 clear
+
 echo "now try running this: 'curl https://dwdeath.github.io/web/gaming_go | sh'"
