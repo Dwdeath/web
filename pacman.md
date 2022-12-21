@@ -124,3 +124,7 @@ Server = https://omniverse.artixlinux.org/$arch
 # Others
 #[chaotic-aur]
 #Include = /etc/pacman.d/chaotic-mirrorlist
+
+#[cachyos]
+#SigLevel = Optional TrustAll
+#Server = https://mirror.cachyos.org/repo/$arch/$repo
