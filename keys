@@ -21,3 +21,8 @@ wget https://raw.githubusercontent.com/CachyOS/CachyOS-PKGBUILDS/master/cachyos-
 wget https://raw.githubusercontent.com/CachyOS/CachyOS-PKGBUILDS/master/cachyos-mirrorlist/cachyos-mirrorlist
 
 makepkg -si
+
+sudo -i 
+rmdir /home/$USER/delete_me
+rmdir /home/$USER/delete_me_2
+exit
