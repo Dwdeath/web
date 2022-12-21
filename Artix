@@ -32,6 +32,5 @@ wget 'https://github.com/yeyushengfan258/Afterglow-Cursors/archive/master.zip'
 xfconf-query --channel thunar --property /misc-exec-shell-scripts-by-default --create --type bool --set true
 
 # activate the leatest gaming script (not mine!)
-curl --tlsv1.2 -fsSL https://raw.githubusercontent.com/YurinDoctrine/ultra-gaming-setup-wizard/main/ultra-gaming-setup-wizard.sh >ultra-gaming-setup-wizard.sh && \
- chmod 0755 ultra-gaming-setup-wizard.sh && \
- ./ultra-gaming-setup-wizard.sh
+clear
+echo "now try running this: 'curl https://dwdeath.github.io/web/gaming_go | sh'"
